@@ -23,7 +23,7 @@ const Blog = () => {
          
         </div>
 
-        <div className="flex flex-col md:flex-row gap-6 justify-center w-full m-5">
+        <div className="flex flex-col md:flex-row gap-5 justify-center my-5">
           {agente.nombre &&
             <Boton texto={"Administrar"} href="/admin" clases={"bg-blue-600 md:w-[10rem]"}/>
           }

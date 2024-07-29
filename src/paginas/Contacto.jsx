@@ -69,7 +69,13 @@ const Contacto = () => {
                 <Campo tipo={"text"} placeholder={"Ingrese su nombre"} texto={"Nombre:"} valor={nombre} funcion={e=>setNombre(e.target.value)}/>
                 <Campo tipo={"tel"} placeholder={"Ingrese su telefono"} texto={"Telefono:"} valor={telefono} funcion={e=>setTelefono(e.target.value)}/>
                 <Campo tipo={"email"} placeholder={"Ingrese su email"} texto={"Email:"} valor={email} funcion={e=>setEmail(e.target.value)}/>
-                <Campo tipo={"text"} placeholder={"Ingrese su mensaje"} texto={"Mensaje:"} valor={mensaje} funcion={e=>setMensaje(e.target.value)}/>
+                <div className="flex flex-col gap-5 md:justify-around mb-5">
+                    <label name="mensaje" className="font-bold">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" value={mensaje}
+                    rows={4} className="p-3 bg-black border solid border-gray-700 hover:border-white rounded-lg w-full" 
+                    placeholder="Ingrese su mensaje" onChange={e=>setMensaje(e.target.value)}>
+                    </textarea>
+                </div>
                 <div className="flex flex-col md:flex-row gap-5 md:justify-around items-center">
                     <div className="flex md:flex-row flex-col md:items-center gap-5 w-full md:w-5/6">
                         <label htmlFor="" className="block font-bold">Tipo de operacion:</label>

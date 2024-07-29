@@ -48,16 +48,16 @@ const ModalFiltro = () => {
 
                 </div>
 
-                <div className="my-5 flex flex-col md:flex-row justify-between items-center gap-5">
+                <div className="my-5 flex flex-col md:flex-row justify-between items-center md:gap-5">
                     <label htmlFor="">Precio</label>
                     <input type="range" min="0" max="100000" step={5000} className="p-3 w-full bg-black border rounded-lg text-white" value={precio}
                     onChange={e=>setPrecio(e.target.value)}/>
                     <p>{precio}</p>
                 </div>
 
-                <div className="my-5 flex flex-col md:flex-row justify-between items-center gap-5">
+                <div className="my-5 flex flex-row justify-between items-center gap-5">
                     <label htmlFor="">Tipo de edificio:</label>
-                    <select type="text" className="p-3 bg-black border rounded-lg  w-full md:w-fit text-center" value={edificio}
+                    <select type="text" className="p-3 bg-black border rounded-lg w-fit text-center" value={edificio}
                     onChange={e=>setEdificio(e.target.value)}>
                         <option value="" disabled selected>-- Seleccionar --</option>
                         <option value="Casa">Casa</option>
@@ -65,9 +65,9 @@ const ModalFiltro = () => {
                     </select>
                 </div>
 
-                <div className="my-5 flex flex-col md:flex-row justify-between items-center gap-5">
-                    <label htmlFor="">Tipo de operacion</label>
-                    <select type="text" className="p-3 bg-black border rounded-lg md:w-fit w-full text-center" value={operacion}
+                <div className="my-5 flex flex-row justify-between items-center gap-5">
+                    <label htmlFor="">Tipo de operacion:</label>
+                    <select type="text" className="p-3 bg-black border rounded-lg w-fit text-center" value={operacion}
                     onChange={e=>setOperacion(e.target.value)}>
                         <option value="" disabled selected>-- Seleccionar --</option>
                         <option value="Venta">Venta</option>
@@ -75,21 +75,21 @@ const ModalFiltro = () => {
                     </select>
                 </div>
 
-                <div className="my-5 flex  flex-col md:flex-row justify-between items-center gap-5">
+                <div className="my-5 flex flex-row justify-between items-center gap-5">
                     <label htmlFor="">Cantidad de baños:</label>
-                    <input type="number" min={1} max={10} className="p-3 bg-black border rounded-lg w-full md:-4/12 text-center" value={baños}
+                    <input type="number" min={1} max={10} className="p-3 bg-black border rounded-lg w-fit md:-4/12 text-center" value={baños}
                     onChange={e=>setBaños(e.target.value)}/>
                 </div>
 
-                <div className="my-5 flex  flex-col md:flex-row justify-between items-center gap-5">
+                <div className="my-5 flex flex-row justify-between items-center gap-5">
                     <label htmlFor="">Cantidad de habitaciones:</label>
-                    <input type="number" min={1} max={10} className="p-3 bg-black border rounded-lg w-full md:-4/12 text-center" value={habitaciones}
+                    <input type="number" min={1} max={10} className="p-3 bg-black border rounded-lg w-fit md:-4/12 text-center" value={habitaciones}
                     onChange={e=>setHabitaciones(e.target.value)}/>
                 </div>
 
-                <div className="my-5 flex  flex-col md:flex-row justify-between items-center gap-5">
+                <div className="my-5 flex flex-row justify-between items-center gap-5">
                     <label htmlFor="">Cantidad de estacionamientos:</label>
-                    <input type="number" min={1} max={10} className="p-3 bg-black border rounded-lg w-full md:-4/12 text-center" value={estacionamientos}
+                    <input type="number" min={1} max={10} className="p-3 bg-black border rounded-lg w-fit md:-4/12 text-center" value={estacionamientos}
                     onChange={e=>setEstacionamientos(e.target.value)}/>
                 </div>
                 <div className="w-fit mx-auto mt-1">

@@ -44,7 +44,7 @@ const PostBlog = ({publicacion, admin}) => {
 
   return (
     <>
-      <article className="flex flex-col md:flex-row gap-5 my-1 items-center justify-between">
+      <article className="flex flex-col md:flex-row gap-5 my-5 items-center justify-between">
       <img src={`https://res.cloudinary.com/dporcnhrk/image/upload/v1721793764/${imagen}.jpg`} alt="imagen-blog" className="w-full md:w-64 rounded-2xl"/>
         <div className="flex flex-col items-center md:items-start md:justify-around gap-y-5 w-full">
           <Link to={`/publicacion/${_id}`}>

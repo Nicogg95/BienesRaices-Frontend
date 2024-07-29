@@ -24,9 +24,9 @@ const SecAnuncios = ({admin, cantidad}) => {
 
   useEffect(()=>{
     const mostrar = () =>{
-        if(pathname === "/") {
-          setMostrarFiltros(false)
-        } 
+      if(pathname === "/") {
+        setMostrarFiltros(false)
+      } 
     }
     mostrar()
 }) 
@@ -40,12 +40,10 @@ const SecAnuncios = ({admin, cantidad}) => {
           (
           <div className="flex flex-col md:flex-row items-center mb-10 justify-center gap-5">
           
-            {!buscador? 
-              ( <h2 className="text-3xl col-span-6">
-                Nuestro Catalogo
-              </h2>)
-              : 
-              (<input className="p-3 text-white rounded-md bg-black border text-center w-full md:w-5/12" placeholder="¿Que esta buscando?" onChange={e=>setBuscar(e.target.value)} onKeyUp={()=>buscarPropiedades(buscar)} value={buscar}/>)}
+            {buscador &&
+  
+              (<input className="p-3 text-white rounded-md bg-black border text-center w-10/12 md:w-5/12" placeholder="¿Que esta buscando?" onChange={e=>setBuscar(e.target.value)} onKeyUp={()=>buscarPropiedades(buscar)} value={buscar}/>)
+            }
             {mostrarFiltros &&
             <div className="flex md:gap-5 gap-16">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
