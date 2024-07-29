@@ -79,7 +79,7 @@ const Admin = () => {
 
   return (
 
-    <div className="container mx-auto px-3 w-12/12 md:w-11/12 my-10 min-h-screen">
+    <div className="mx-auto px-3 w-12/12 md:w-11/12 my-10 min-h-screen">
       <h1 className="text-center font-bold uppercase text-3xl mb-10">Bienvenido a la seccion de Administradores</h1>
 
     {/* ------------- Barra de navegacion ------------- */}
@@ -93,7 +93,7 @@ const Admin = () => {
 
     {/* ------------- Seccion Propiedades ------------- */}
 
-      <div className={`${catalogo ? visible : invisible} md:grid md:grid-cols-6 bg-zinc-800 rounded-xl shadow shadow-white`}>
+      <div className={`${catalogo ? `${visible} md:grid` : invisible} md:grid-cols-6 bg-zinc-800 rounded-xl shadow shadow-white`}>
 
           {/* ------ Seccion Formulario para propiedades ------ */}
 

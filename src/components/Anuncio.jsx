@@ -80,13 +80,13 @@ const Anuncio = ({propiedad, admin}) => {
       
         {/* ------ Anuncio para la seccion Inicio ------ */}
 
-        <div className="flex flex-col gap-y-5 items-center min-w-[300px] min-h-fit rounded-t-md border border-gray-300 hover:shadow-white hover:shadow-lg">
+        <div className="flex flex-col gap-y-5 items-center min-w-[18rem] min-h-fit rounded-t-md border border-gray-300 hover:shadow-white hover:shadow-lg">
           <img src={`https://res.cloudinary.com/dporcnhrk/image/upload/v1721198841/${imagen[0]}.jpg`} alt="foto propiedad" className="w-full border-b rounded-t-md border-gray-300"/>
           <h3 className="text-center text-2xl">{titulo}</h3>
           <div className="flex flex-col gap-y-5 px-5">
               <p className="text-center h-[80px] mb-5">{descripcion}</p>
               <p className="font-bold text-lime-600 text-xl text-center my-5">$ {precio}</p>
-              <div className="flex justify-center gap-x-7 items-center mb-5">
+              <div className="flex justify-center gap-x-4 items-center mb-5">
                 <img src="../img/icono_wc.svg" alt="icono baño" className="invert w-[35px]"/>
                 <p>{baños}</p>
                 <img src="../img/icono_dormitorio.svg" alt="icono habitacion" className="invert w-10"/>

@@ -26,8 +26,6 @@ export const BlogProvider = ({children}) =>{
 
             try{
                 const {data} = await clienteAxios.put(`/blog/editar/${publicacion.id}`, publicacion, config);
-                console.log("ahora va la data")
-                console.log(data)
                 const actualizado = blog.map(elemento => elemento._id === data._id ? data : elemento)
                 setBlog(actualizado);
 

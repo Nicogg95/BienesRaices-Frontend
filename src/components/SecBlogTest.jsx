@@ -8,8 +8,6 @@ const SecBlogTest = () => {
 
   const publicaciones = blog.data;
 
-  console.log(publicaciones);
-
   return (
     <>
       <div className="container px-10 mx-auto grid md:grid-cols-2 my-10 gap-10">

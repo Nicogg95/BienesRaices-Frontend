@@ -27,7 +27,7 @@ const Blog = () => {
           {agente.nombre &&
             <Boton texto={"Administrar"} href="/admin" clases={"bg-blue-600 md:w-[10rem]"}/>
           }
-            <Boton texto={"Inicio"} href="/inicio" clases={"bg-yellow-600 md:w-[10rem]"} />
+            <Boton texto={"Inicio"} href="/" clases={"bg-yellow-600 md:w-[10rem]"} />
         </div>
 
     </div>

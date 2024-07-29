@@ -26,8 +26,8 @@ function App() {
             <BlogProvider>
               <Routes>
                 <Route path="/" element={<Layout />}>
-                  <Route index element={<Login/>}/>
-                  <Route path="inicio" element={<Inicio />}/>
+                  <Route index element={<Inicio/>}/>
+                  <Route path="login" element={<Login />}/>
                   <Route path="catalogo" element={<Catalogo />}/>
                   <Route path="contacto" element={<Contacto />}/>
                   <Route path="nosotros" element={<Nosotros />}/>

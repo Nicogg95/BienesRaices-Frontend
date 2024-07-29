@@ -24,7 +24,7 @@ const SecAnuncios = ({admin, cantidad}) => {
 
   useEffect(()=>{
     const mostrar = () =>{
-        if(pathname === "/inicio") {
+        if(pathname === "/") {
           setMostrarFiltros(false)
         } 
     }
@@ -34,7 +34,7 @@ const SecAnuncios = ({admin, cantidad}) => {
 
   return (
     <>
-      <div className="container md:px-10 mx-auto">
+      <div className="container md:px-5 mx-auto">
         
         {!admin &&
           (
@@ -64,7 +64,7 @@ const SecAnuncios = ({admin, cantidad}) => {
           </div>)
         }
 
-        <div className={`${admin ? "gap-10 my-8 md:col-span-2 grid md:grid-cols-2" : "grid px-5 md:grid-cols-3 gap-x-10 gap-y-5"}`}>
+        <div className={`${admin ? "gap-10 my-8 md:col-span-2 grid md:grid-cols-2" : "grid px-5 md:grid-cols-3 gap-16"}`}>
           {propiedades.slice(0, fin).map(propiedad => (
             <Anuncio admin={admin}  
               key={propiedad._id}

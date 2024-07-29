@@ -11,8 +11,6 @@ export const MensajeProvider = ({children}) => {
 
     const crear = async(mensaje) =>{
 
-        console.log(mensaje)
-
         try{
             const {data} = await clienteAxios.post("/mensajes/", mensaje);
             const mensajeNuevo = data;

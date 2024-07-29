@@ -18,7 +18,7 @@ const Header = () => {
     
     useEffect(()=>{
         const mostrar = () =>{
-            if(pathname === "/inicio") {
+            if(pathname === "/") {
                 setMostrarFondo(true)
             } else {
                 setMostrarFondo(false)
@@ -35,7 +35,7 @@ const Header = () => {
     <>
         <div className={`${mostrarFondo ? "bg-[url('../img/header.jpg')] bg-center bg-cover min-h-[28rem] md:min-h-[35rem] p-10" : "bg-[#292929] p-5"} flex flex-col justify-between`}>
             <div className="flex flex-col md:flex-row items-center gap-5 justify-between">
-                <Link to="/inicio">
+                <Link to="/">
                     <img src="../img/logo.svg" alt="logo bienes raices" className="w-64" />
                 </Link>
                 <Link onClick={()=>handleClick()}>

@@ -66,9 +66,9 @@ const FormLogin = () => {
 
                 <div className="my-5 flex flex-col md:flex-row  justify-center gap-y-5 gap-x-20">
                     
-                    <div className="flex items-center md:w-56 gap-x-2 justify-center border p-2 bg-lime-600">
+                    <div className="flex items-center md:w-56 px-1 justify-center border bg-lime-600">
                         <Boton texto={"Iniciar sesion"} clases={""} form={true}/>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
                         </svg>
                     </div>

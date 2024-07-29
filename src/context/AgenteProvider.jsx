@@ -85,31 +85,6 @@ const AgenteProvider = ({children}) => {
         }
     }
 
-    // const verPerfil = async() =>{
-
-    //     const token = localStorage.getItem("token");
-
-    //     if(!token) return
-
-    //     const config = {
-
-    //         headers: {
-    //             "Content-Type": "application/json",
-    //             Authorization: `Bearer ${token}`
-    //         }
-    //     }
-
-    //     try{
-    //         const {data} = await clienteAxios("/agentes/", config)
-    //         console.log(data)
-            
-    //     }catch(error){
-    //         console.log(error)
-    //     }
-        
-    // }   
-    // verPerfil()
-
     const editarPerfil = async(agente, foto) =>{
 
         const token = localStorage.getItem("token")
@@ -127,7 +102,7 @@ const AgenteProvider = ({children}) => {
         try{
 
             const {data} = await clienteAxios.put(`/agentes/${agente._id}`, agente, config)
-            console.log(data)
+
             return {
                 msg: "Datos actualizados con exito"
             }
