@@ -108,17 +108,17 @@ const FormLoginRegistro = () => {
 
                 </div>
 
-                <div className="flex my-10 justify-center gap-x-10">
-                    <div {...getRootProps()} className="border p-3 h-fit bg-yellow-600 font-bold">
+                <div className="flex flex-col md:flex-row my-10 justify-center gap-6">
+                    <div {...getRootProps()} className="border p-4 h-fit bg-yellow-600 font-bold">
                         <input type="file" name="foto" {...getInputProps()}/>
-                        <div className="flex justify-center md:gap-x-3 items-center">
+                        <div className="flex justify-center gap-x-3 items-center">
                             <p className="cursor-pointer uppercase">Foto de perfil</p>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M12 10.5v6m3-3H9m4.06-7.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
                             </svg>
                         </div> 
                     </div>
-                    <div className="border flex items-center md:w-52 p-3 gap-x-3 justify-center bg-slate-800 md:h-fit">
+                    <div className="border flex items-center md:w-52 p-4 gap-x-3 justify-center bg-slate-800 md:h-fit">
                         <button type="button" className="uppercase font-semibold cursor-pointer" onClick={()=>limpiarForm()}>Limpiar</button>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />

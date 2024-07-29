@@ -70,8 +70,8 @@ const Contacto = () => {
                 <Campo tipo={"tel"} placeholder={"Ingrese su telefono"} texto={"Telefono:"} valor={telefono} funcion={e=>setTelefono(e.target.value)}/>
                 <Campo tipo={"email"} placeholder={"Ingrese su email"} texto={"Email:"} valor={email} funcion={e=>setEmail(e.target.value)}/>
                 <Campo tipo={"text"} placeholder={"Ingrese su mensaje"} texto={"Mensaje:"} valor={mensaje} funcion={e=>setMensaje(e.target.value)}/>
-                <div className="flex flex-col md:flex-row gap-y-5 md:justify-around items-center">
-                    <div className="flex md:flex-row flex-col md:items-center gap-5 w-full">
+                <div className="flex flex-col md:flex-row gap-5 md:justify-around items-center">
+                    <div className="flex md:flex-row flex-col md:items-center gap-5 w-full md:w-5/6">
                         <label htmlFor="" className="block font-bold">Tipo de operacion:</label>
                         <select name="operacion" id="operacion" className="p-3 bg-black border solid border-gray-700 hover:border-white rounded-lg w-full text-center" onChange={e=>setOperacion(e.target.value)} value={operacion}>
                             <option value="" disabled selected>--SELECCIONAR--</option>
@@ -80,7 +80,7 @@ const Contacto = () => {
                             <option value="alquiler">Alquiler</option>
                         </select>
                     </div>
-                    <div className="flex flex-col md:flex-row md:items-center gap-3 w-full">
+                    <div className="flex flex-col md:flex-row md:items-center gap-3 w-full justify-center">
                         <label htmlFor="" className="font-bold">Precio o presupuesto:</label>
                         <Campo tipo={"number"} funcion={e=>setPresupuesto(e.target.value)} valor={presupuesto}/>
                     </div> 

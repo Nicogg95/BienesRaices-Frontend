@@ -117,7 +117,7 @@ const Admin = () => {
               : 
               (<input className="p-3 text-white rounded-md bg-black border text-center w-10/12 my-5" placeholder="¿Que esta buscando?" onChange={e=>setBuscar(e.target.value)} onKeyUp={()=>buscarPropiedades(buscar)} value={buscar}/>)}
 
-            <div className="flex flex-col md:flex-row gap-10">
+            <div className="flex flex-row gap-20 md:gap-10">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
                   viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6 cursor-pointer" onClick={()=>handleClickBuscar()}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />

@@ -64,7 +64,7 @@ const FormLogin = () => {
 
                 <Ping ubicacion={ubicacion} input={password} />
 
-                <div className="my-5 flex flex-col md:flex-row  justify-center gap-y-5 gap-x-20">
+                <div className="my-5 flex flex-col-reverse md:flex-row  justify-center gap-y-5 gap-x-20">
                     
                     <div className="flex items-center md:w-56 px-1 justify-center border bg-lime-600">
                         <Boton texto={"Iniciar sesion"} clases={""} form={true}/>
