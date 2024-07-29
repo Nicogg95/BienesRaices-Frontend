@@ -49,7 +49,7 @@ const Propiedad = () => {
 
   return (
     <>
-      <div className="container mx-auto px-10">
+      <div className="container mx-auto p-10">
    
         <div className="grid md:grid-cols-2 gap-x-10 items-center">
 

@@ -85,7 +85,7 @@ const Anuncio = ({propiedad, admin}) => {
           <h3 className="text-center text-2xl">{titulo}</h3>
           <div className="flex flex-col gap-y-5 px-5">
               <p className="text-center h-[80px] mb-5">{descripcion}</p>
-              <p className="font-bold text-lime-600 text-xl text-center my-5">$ {precio}</p>
+              <p className="font-bold text-lime-600 text-xl text-center mt-10 mb-5">$ {precio}</p>
               <div className="flex justify-center gap-x-4 items-center mb-5">
                 <img src="../img/icono_wc.svg" alt="icono baño" className="invert w-[35px]"/>
                 <p>{baños}</p>

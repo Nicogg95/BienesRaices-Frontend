@@ -71,23 +71,24 @@ const Contacto = () => {
                 <Campo tipo={"email"} placeholder={"Ingrese su email"} texto={"Email:"} valor={email} funcion={e=>setEmail(e.target.value)}/>
                 <Campo tipo={"text"} placeholder={"Ingrese su mensaje"} texto={"Mensaje:"} valor={mensaje} funcion={e=>setMensaje(e.target.value)}/>
                 <div className="flex flex-col md:flex-row gap-y-5 md:justify-around items-center">
-                    <div className="flex items-center gap-x-5">
+                    <div className="flex md:flex-row flex-col md:items-center gap-5 w-full">
                         <label htmlFor="" className="block font-bold">Tipo de operacion:</label>
-                        <select name="operacion" id="operacion" className="p-3 bg-black border solid border-gray-700 hover:border-white rounded-lg" onChange={e=>setOperacion(e.target.value)} value={operacion}>
+                        <select name="operacion" id="operacion" className="p-3 bg-black border solid border-gray-700 hover:border-white rounded-lg w-full text-center" onChange={e=>setOperacion(e.target.value)} value={operacion}>
                             <option value="" disabled selected>--SELECCIONAR--</option>
                             <option value="venta">Venta</option>
                             <option value="compra">Compra</option>
                             <option value="alquiler">Alquiler</option>
                         </select>
                     </div>
-                    <div className="flex items-center gap-x-5">
+                    <div className="flex flex-col md:flex-row md:items-center gap-3 w-full">
                         <label htmlFor="" className="font-bold">Precio o presupuesto:</label>
                         <Campo tipo={"number"} funcion={e=>setPresupuesto(e.target.value)} valor={presupuesto}/>
                     </div> 
                 </div>
-                <div className="flex justify-around items-center">
-                    <div className="flex gap-10 my-5 items-center">
-                        <h2 className="font-bold">Medio de contacto: </h2> 
+            
+                <div className="flex flex-col md:flex-row gap-10 my-10 items-center">
+                    <h2 className="font-bold">Medio de contacto: </h2> 
+                    <div className="flex gap-x-14">
                         <div className="flex items-center justify-center gap-x-5">
                             <label htmlFor="">Email:</label>
                             <input name="contacto" type="radio" onChange={e=>setContacto(e.target.value)} value="email"/>
@@ -96,7 +97,7 @@ const Contacto = () => {
                             <label htmlFor="">Telefono:</label>
                             <input name="contacto" type="radio"  onChange={e=>setContacto(e.target.value)} value="telefono"/>
                         </div>
-                    </div>
+                    </div>      
                 </div>
                 {contacto === "telefono" &&
                     <div className="flex flex-col md:flex-row gap-5 items-center mt-5">

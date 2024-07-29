@@ -10,7 +10,7 @@ const SecBlogTest = () => {
 
   return (
     <>
-      <div className="container px-10 mx-auto grid md:grid-cols-2 my-10 gap-10">
+      <div className="px-10 mx-auto grid md:grid-cols-2 my-10 gap-10">
           <div className="flex flex-col gap-y-5">
           <h2 className='text-center text-3xl'>Nuestro Blog</h2>
           {publicaciones?.map(publicacion =>(
