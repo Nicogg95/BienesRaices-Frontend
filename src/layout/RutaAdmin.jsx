@@ -13,7 +13,7 @@ const Layout = () => {
       <div className="text-white bg-[#191919]">
         <Header />
         {agente?._id? (<Outlet />)
-         : <Navigate to="/"/>}
+         : <Navigate to="/login"/>}
         <Footer />
       </div>
     </>

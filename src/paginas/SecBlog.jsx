@@ -39,7 +39,7 @@ const Blog = () => {
         <div className="md:col-span-2 md:col-start-5">
           <div className="flex flex-col justify-center items-center md:col-span-2 w-full py-8">
           {movil && 
-            <Boton texto={!mostrarForm? "Agregar propiedad": "Ocultar Formulario"} 
+            <Boton texto={!mostrarForm? "Agregar publicacion": "Ocultar Formulario"} 
                   clases={"bg-lime-600"} 
                   funcion={()=>handleClickForm()}/>
           }

@@ -38,7 +38,7 @@ const ConfirmarCuenta = () => {
     const {msg} = alerta;
 
     setTimeout(() => {
-        navigate("/");
+        navigate("/login");
     }, 3000);
 
   return (

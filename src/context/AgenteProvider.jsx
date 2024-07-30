@@ -10,7 +10,7 @@ const AgenteProvider = ({children}) => {
     const [agente, setAgente] = useState({});
     const [cargando, setCargando] = useState(true)
     const navigate = useNavigate();
-
+    const [error, setError] = useState("")
     
     useEffect(()=>{
 
@@ -44,25 +44,17 @@ const AgenteProvider = ({children}) => {
 
     }, [agente])
 
-
     const iniciarSesion = async(datos) =>{
 
-        const config = {
-
-            headers: {
-                "Content-Type" : "application/json"
-            }
-        }
-
         try{
-            const {data} = await clienteAxios.post("/agentes/login", datos, config);
+            const {data} = await clienteAxios.post("/agentes/login", datos);
             localStorage.setItem("token", data.token)
-            console.log(data)
             setAgente(data)
             navigate("/admin")
 
         }catch(error){
-            return error.response.data.msg
+            setError(error.response.data.msg)
+            return;
         }
 
     }
@@ -81,7 +73,8 @@ const AgenteProvider = ({children}) => {
             const {data} = await clienteAxios.post("/agentes/", agente, config);
             console.log(data)
         }catch(error){
-            console.log(error)
+            setError(error.response.data.msg)
+            return;
         }
     }
 
@@ -118,7 +111,6 @@ const AgenteProvider = ({children}) => {
 
     const cerrarSesion = () =>{
         localStorage.removeItem("token");
-        navigate("/")
         setAgente({})
     }
 
@@ -129,7 +121,7 @@ const AgenteProvider = ({children}) => {
         iniciarSesion, 
         registrarse, agente, 
         cerrarSesion, editarPerfil,
-        cargando}}>
+        cargando, error}}>
         {children}
        </AgenteContext.Provider>
     )

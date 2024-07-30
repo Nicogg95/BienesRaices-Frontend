@@ -90,7 +90,7 @@ const Perfil = () => {
 
           <div className="grid grid-cols-6 gap-x-5 items-center my-3">
           <label htmlFor="" className="col-span-2 text-start">Fecha de nacimiento:</label>
-            <input type="text" value={formatearFecha(fechaNacimiento)} disabled
+            <input type="text" value={fechaNacimiento? formatearFecha(fechaNacimiento) : ""} disabled
             className={`p-3 col-span-4 bg-black rounded-xl border`} />
           </div>
 

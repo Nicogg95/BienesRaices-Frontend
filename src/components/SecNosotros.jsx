@@ -3,7 +3,7 @@ const SecNosotros = () => {
   return (
     <div className='container mx-auto p-10 text-center'>
         <h2 className='text-center text-3xl'>Mas Sobre Nosotros</h2>
-        <div className='grid md:grid-cols-3 gap-x-10 my-14'>
+        <div className='grid md:grid-cols-3 gap-10 my-14'>
             <div className='flex flex-col items-center justify-between gap-y-10'>
                 <img src="../img/icono1.svg" alt="" className='w-32'/>
                 <h3 className='text-3xl uppercase'>Seguridad</h3>
