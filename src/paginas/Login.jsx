@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import useAgentes from "../hooks/useAgentes";
 import FormLogin from "../components/FormLogin";
 import FormRegistro from "../components/FormRegistro"
@@ -10,10 +10,13 @@ const Login = () => {
   const {agente} = useAgentes();
   const navigate = useNavigate()
 
+  useEffect(() => {
+      
+    if(agente?.nombre){
+      navigate("/admin")
+    }  
 
-  if(agente?.nombre){
-    navigate("/admin")
-  }
+  }, [agente?.nombre, navigate]);
 
   const handleOnClick = () =>{
 

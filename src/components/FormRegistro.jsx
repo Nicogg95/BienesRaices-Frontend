@@ -95,7 +95,7 @@ const FormLoginRegistro = () => {
 
                         <div className="relative">
                             <Campo texto={"Fecha de nacimiento:"} tipo={"date"} placeholder={"Ingrese su fecha de nacimiento"} 
-                            valor={fechaNacimiento}
+                            valor={fechaNacimiento} clases={"w-full"}
                             funcion={e=>{setFechaNacimiento(e.target.value)}}/>
                             <Ping ubicacion={"inset-y-14 right-11"} input={fechaNacimiento} />
                         </div>

@@ -95,6 +95,8 @@ export const PropiedadesProvider = ({children}) => {
             console.log(error);
         }
 
+        obtenerPropiedades();
+
     }
 
     const filtrarPropiedades = async(valor) =>{

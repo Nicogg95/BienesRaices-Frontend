@@ -5,6 +5,9 @@ import SecContacto from "../components/SecContacto"
 import SecNosotros from "../components/SecNosotros"
 
 const Inicio = () => {
+
+  console.log(null || "tring")
+
   return (
     <>
       <SecNosotros />
