@@ -39,7 +39,7 @@ const VerBlog = () => {
   return (
     <>
       <div className="container p-10 min-h-fit">
-        <Link to={`http://localhost:5173/blog/${id}`}>
+        <Link to={`/blog/${id}`}>
           <h1 className="text-2xl text-center font-bold">{titulo}</h1>
         </Link>
         <div className="grid md:grid-cols-2 my-10 gap-y-10">
