@@ -62,14 +62,21 @@ const SecAnuncios = ({admin, cantidad}) => {
           </div>)
         }
 
-        <div className={`${admin ? "gap-10 my-8 md:col-span-2 grid md:grid-cols-2" : "grid px-5 md:grid-cols-3 gap-8"}`}>
-          {propiedades.slice(0, fin).map(propiedad => (
+        {propiedades.length >= 1 ? 
+          
+          (<div className={`${admin ? "gap-5 my-8 md:col-span-2 grid md:grid-cols-2" : "grid px-5 md:grid-cols-3 gap-8"}`}>
+            {propiedades.slice(0, fin).map(propiedad => (
             <Anuncio admin={admin}  
               key={propiedad._id}
               propiedad={propiedad}/>
-          ))}    
-        </div>
+          ))}</div>) : (
 
+            <div className="mx-auto text-center mt-10"> 
+              <h3 className="text-xl font-bold">No hay anuncios disponibles</h3>
+            </div>
+          )
+        }   
+        
       </div>
     </>
   )

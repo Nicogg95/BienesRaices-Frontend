@@ -109,17 +109,16 @@ const FormPropiedad = () => {
           </div>
         
           <div className="flex justify-around">
-            <Campo texto={"Estacionamientos:"} max={"10"}
-                    clases={"w-5/12"}
-                    valor={estacionamientos} tipo={"number"} 
-                    funcion={e=>setEstacionamientos(e.target.value)}
-                    nombre={"estacionamientos"}/>
-            
             <Campo texto={"Baños:"} max={"10"}
                     clases={"w-5/12"}
                     valor={baños} tipo={"number"} 
                     funcion={e=>setBaños(e.target.value)}
                     nombre={"baños"}/>
+            <Campo texto={"Estacionamientos:"} max={"10"}
+                    clases={"w-5/12"}
+                    valor={estacionamientos} tipo={"number"} 
+                    funcion={e=>setEstacionamientos(e.target.value)}
+                    nombre={"estacionamientos"}/>
           </div>
 
           <div className="flex justify-around items-center mt-5">

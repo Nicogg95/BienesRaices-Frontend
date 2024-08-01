@@ -22,7 +22,7 @@ const Perfil = () => {
 
   const formatearFecha = (fecha) =>{
     const nuevaFecha = new Date(fecha.split('T')[0].split('-'));
-    return new Intl.DateTimeFormat("es-AR", {dateStyle: "long"}).format(nuevaFecha);
+    return new Intl.DateTimeFormat("es-AR", {dateStyle: "short"}).format(nuevaFecha);
   }
 
   const handleSubmit = (e) =>{

@@ -25,8 +25,19 @@ export const MensajeProvider = ({children}) => {
     useEffect(()=>{
         const verMensajes = async() =>{
 
+            const token = localStorage.getItem("token");
+
+            if(!token) return;
+
+            const config = {
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorizarion: `Bearer ${token}`
+                }
+            }
+
             try{
-                const {data} = await clienteAxios("/mensajes/");
+                const {data} = await clienteAxios("/mensajes/", config);
                 setMensajes(data)
             }catch(error){
                 console.log(error);

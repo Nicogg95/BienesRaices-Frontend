@@ -15,7 +15,7 @@ export const PropiedadesProvider = ({children}) => {
 
         obtenerPropiedades();
        
-    }, [])
+    }, [propiedades])
 
     const obtenerPropiedades = async () => {
         try{
@@ -28,10 +28,21 @@ export const PropiedadesProvider = ({children}) => {
 
     const guardarPropiedad = async(propiedad, imagen) =>{
 
+        const token = localStorage.getItem("token");
+
+        if(!token) return;
+
+        const config = {
+            headers: {
+                "Content-Type": `${!imagen.includes("") ? "multipart/form-data" : "application/json"}`,
+                Authorizarion: `Bearer ${token}`
+            }
+        }
+
         if(propiedad.id){
 
             try{
-                const {data} = await clienteAxios.put(`/propiedades/editar/${propiedad.id}`, propiedad)
+                const {data} = await clienteAxios.put(`/propiedades/editar/${propiedad.id}`, propiedad, token)
                 const actualizado = propiedades.map(propiedadState => propiedadState._id === data._id ? data : propiedadState)
     
                 setPropiedades(actualizado);
@@ -42,16 +53,6 @@ export const PropiedadesProvider = ({children}) => {
         } else {
 
             try{
-            
-                const token = localStorage.getItem('token')
-                if(!token) return
-
-                const config = {
-                    headers: {
-                        "Content-Type": "multipart/form-data",
-                        Authorization: `Bearer ${token}`
-                    }
-                }
 
                 propiedad.imagen = imagen;
 
@@ -89,8 +90,18 @@ export const PropiedadesProvider = ({children}) => {
 
     const eliminarPropiedad = async(id) => {
 
+        const token = localStorage.getItem("token");
+
+        if(!token) return;
+
+        const config = {
+            headers: {
+                Authorizarion: `Bearer ${token}`
+            }
+        }
+
         try{
-            const {data} = await clienteAxios.delete(`/propiedades/eliminar/${id}`)
+            const {data} = await clienteAxios.delete(`/propiedades/eliminar/${id}`, config)
         }catch(error){
             console.log(error);
         }

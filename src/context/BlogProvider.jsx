@@ -9,6 +9,19 @@ export const BlogProvider = ({children}) =>{
     const [publicacion, setPublicacion] = useState({});
     const [blog, setBlog] = useState([]);
 
+    useEffect(()=>{
+        const obtenerBlogs = async() =>{
+
+            try{
+                const data = await clienteAxios("/blog/verBlog");
+                setBlog(data);
+            }catch(error){
+                console.log(error);
+            }
+        }
+        obtenerBlogs();
+    }, [blog]);
+
     const crear = async(publicacion, foto) =>{
 
         const token = localStorage.getItem("token");
@@ -46,19 +59,6 @@ export const BlogProvider = ({children}) =>{
         }
         
     }
-
-    useEffect(()=>{
-        const obtenerBlogs = async() =>{
-
-            try{
-                const data = await clienteAxios("/blog/verBlog");
-                setBlog(data);
-            }catch(error){
-                console.log(error);
-            }
-        }
-        obtenerBlogs();
-    }, [blog]);
 
     const eliminarPublicacion = async(id) =>{
 

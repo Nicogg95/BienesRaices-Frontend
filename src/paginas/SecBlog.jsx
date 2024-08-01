@@ -23,11 +23,9 @@ const Blog = () => {
     setMostrarForm(!mostrarForm)
   }
 
-  
-
   return (
     <>
-      <div className="container mx-auto p-10 grid md:grid-cols-6 gap-y-10 md:gap-x-10 bg-zinc-800 rounded-xl">
+      <div className="container mx-auto p-5 grid md:grid-cols-6 gap-y-10 md:gap-x-10 bg-zinc-800 rounded-xl">
         <div className="md:col-span-4">
           <h2 className="text-center text-2xl font-bold col-span-6 mb-10">{!publicaciones?.lenght ? "Posteos del blog" : "Comienza a formar tu blog con el formulario"}</h2>
           <div className=" flex flex-col gap-y-5 overflow-auto h-[45rem]">
