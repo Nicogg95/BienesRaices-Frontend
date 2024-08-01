@@ -51,8 +51,8 @@ const Anuncio = ({propiedad, admin}) => {
       {admin ? 
       (<> {/* ------ Anuncio para la seccion Admin ------ */}
 
-        <div className="border border-gray-300 rounded-md flex flex-col justify-between my-5 md:my-1 max-w-12/12">
-          <img src={`https://res.cloudinary.com/dporcnhrk/image/upload/v1721198841/${imagen[0]}.jpg`} alt="foto propiedad" className="max-w-10/12 border-gray-300 border rounded-t-md"/>
+        <div className="border border-gray-300 rounded-md flex flex-col justify-between my-5 md:my-1 w-11/12">
+          <img src={`https://res.cloudinary.com/dporcnhrk/image/upload/v1721198841/${imagen[0]}.jpg`} alt="foto propiedad" className="w-12/12 border-gray-300 border rounded-t-md"/>
           <h3 className="text-center text-2xl pb-3 my-5 border-b-2 w-10/12 mx-auto">{titulo}</h3>
           <div className={`flex flex-col gap-y-2 px-5 h-fit md:min-h-[185px]`}>  
             <p className='break-words mb-5'>{descripcion}</p>
