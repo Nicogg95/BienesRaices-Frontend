@@ -69,9 +69,9 @@ const Anuncio = ({propiedad, admin}) => {
             <p>{estacionamientos}</p>
           </div>  
           <div className="grid grid-cols-3 mt-5 justify-center">
-            <button className="col-span-1 p-3 uppercase bg-red-600 hover:bg-red-700 border rounded-bl-md font-bold" onClick={()=>btnEliminar()}>Eliminar</button>
-            <button className="col-span-1 p-3 bg-blue-600 uppercase hover:bg-blue-700 border font-bold"  onClick={()=>setEdicion(propiedad)}>Editar</button>
-            <Boton clases="col-span-1 p-3 bg-lime-600 hover:bg-lime-700 border rounded-br-md font-bold" href={`/propiedad/${_id}`} texto={"Ver"}/>
+            <button className="col-span-1 py-3 md:p-3 uppercase bg-red-600 hover:bg-red-700 border rounded-bl-md font-bold" onClick={()=>btnEliminar()}>Eliminar</button>
+            <button className="col-span-1 py-3 md:p-3 bg-blue-600 uppercase hover:bg-blue-700 border font-bold"  onClick={()=>setEdicion(propiedad)}>Editar</button>
+            <Boton clases="col-span-1 py-3 md:p-3 bg-lime-600 hover:bg-lime-700 border rounded-br-md font-bold" href={`/propiedad/${_id}`} texto={"Ver"}/>
           </div> 
         </div>
       </>)
