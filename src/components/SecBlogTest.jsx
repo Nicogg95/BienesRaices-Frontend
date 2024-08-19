@@ -13,9 +13,17 @@ const SecBlogTest = () => {
       <div className="px-10 mx-auto grid md:grid-cols-2 my-10 gap-10">
           <div className="flex flex-col gap-y-5">
           <h2 className='text-center text-3xl'>Nuestro Blog</h2>
-          {publicaciones?.map(publicacion =>(
+          {publicaciones? 
+          <>
+            {publicaciones?.map(publicacion =>(
             <PostBlog key={publicacion._id} publicacion={publicacion}/>
-          ))}
+            ))}
+          </>:<>
+            <div className="flex items-center text-center mt-60"> 
+              <img src="img\cargando.webp" className="w-2/12 m-auto"/>
+            </div>
+          </>}
+          
           </div>
           <div className="flex flex-col gap-y-10">
             <h2 className='text-center text-3xl'>Testimonios</h2>

@@ -54,7 +54,7 @@ const Propiedad = () => {
         <div className="grid md:grid-cols-2 gap-x-10 items-center">
 
           <div className="w-12/12 md:w-11/12 my-10">
-              <ImageGallery items={imagenes} autoPlay={false} showPlayButton={false}/>
+            <ImageGallery items={imagenes} autoPlay={false} showPlayButton={false}/>
           </div>
   
           <div className="flex flex-col gap-y-5">

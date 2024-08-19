@@ -8,7 +8,7 @@ import { useLocation } from "react-router-dom";
 
 const SecAnuncios = ({admin, cantidad}) => {
 
-  const {propiedades,buscarPropiedades, mostrarModal, setMostrarModal} = usePropiedades();
+  const {propiedades, buscarPropiedades, mostrarModal, setMostrarModal} = usePropiedades();
   const [buscador, setBuscador] = useState(false);
   const [mostrarFiltros, setMostrarFiltros] = useState(true)
   const [buscar, setBuscar] = useState("");
@@ -62,17 +62,17 @@ const SecAnuncios = ({admin, cantidad}) => {
           </div>)
         }
 
-        {propiedades.length >= 1 ? 
+        {propiedades? 
           
           (<div className={`${admin ? "gap-5 my-8 md:col-span-2 grid md:grid-cols-2 w-fit" : "grid px-5 md:grid-cols-3 gap-8"}`}>
-            {propiedades.slice(0, fin).map(propiedad => (
+            {propiedades?.slice(0, fin).map(propiedad => (
             <Anuncio admin={admin}  
               key={propiedad._id}
               propiedad={propiedad}/>
-          ))}</div>) : (
-
+          ))}</div>
+          ):(
             <div className="mx-auto text-center mt-10"> 
-              <h3 className="text-xl font-bold">No hay anuncios disponibles</h3>
+              <img src="img\cargando.webp" className="w-[10rem] mx-auto"/>
             </div>
           )
         }   
