@@ -65,7 +65,7 @@ const Contacto = () => {
         <div className="flex flex-col gap-y-10 container mx-auto p-10">
             <h1 className="text-center text-3xl uppercase font-bold">Contactenos!</h1>
             <img src="../img/destacada3.jpg" alt="imagen-contacto" className="md:w-9/12 mx-auto rounded-xl border border-gray-500"/>
-            <form action="" onSubmit={handleSubmit} className="md:w-10/12">
+            <form action="" onSubmit={handleSubmit} className="md:w-10/12 md:mx-auto">
                 <Campo tipo={"text"} placeholder={"Ingrese su nombre"} texto={"Nombre:"} valor={nombre} funcion={e=>setNombre(e.target.value)}/>
                 <Campo tipo={"tel"} placeholder={"Ingrese su telefono"} texto={"Telefono:"} valor={telefono} funcion={e=>setTelefono(e.target.value)}/>
                 <Campo tipo={"email"} placeholder={"Ingrese su email"} texto={"Email:"} valor={email} funcion={e=>setEmail(e.target.value)}/>
