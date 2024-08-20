@@ -65,7 +65,7 @@ const Contacto = () => {
         <div className="flex flex-col gap-y-10 container mx-auto p-10">
             <h1 className="text-center text-3xl uppercase font-bold">Contactenos!</h1>
             <img src="../img/destacada3.jpg" alt="imagen-contacto" className="md:w-9/12 mx-auto rounded-xl border border-gray-500"/>
-            <form action="" onSubmit={handleSubmit} className="md:w-10/12">
+            <form action="" onSubmit={handleSubmit} className="md:w-10/12 md:mx-auto">
                 <Campo tipo={"text"} placeholder={"Ingrese su nombre"} texto={"Nombre:"} valor={nombre} funcion={e=>setNombre(e.target.value)}/>
                 <Campo tipo={"tel"} placeholder={"Ingrese su telefono"} texto={"Telefono:"} valor={telefono} funcion={e=>setTelefono(e.target.value)}/>
                 <Campo tipo={"email"} placeholder={"Ingrese su email"} texto={"Email:"} valor={email} funcion={e=>setEmail(e.target.value)}/>
@@ -76,8 +76,8 @@ const Contacto = () => {
                     placeholder="Ingrese su mensaje" onChange={e=>setMensaje(e.target.value)}>
                     </textarea>
                 </div>
-                <div className="flex flex-col md:flex-row gap-5 md:justify-around items-center">
-                    <div className="flex md:flex-row flex-col md:items-center gap-5 w-full md:w-5/6">
+                <div className="flex flex-col md:flex-row gap-5 md:justify-around items-center my-10">
+                    <div className="flex md:flex-row flex-col md:items-center gap-5 w-full md:w-4/6">
                         <label htmlFor="operacion" className="block font-bold">Tipo de operacion:</label>
                         <select name="operacion" id="operacion" className="p-3 bg-black border solid border-gray-700 hover:border-white rounded-lg w-full text-center" onChange={e=>setOperacion(e.target.value)} value={operacion}>
                             <option value="" disabled selected>--SELECCIONAR--</option>
@@ -86,14 +86,15 @@ const Contacto = () => {
                             <option value="alquiler">Alquiler</option>
                         </select>
                     </div>
-                    <div className="flex flex-col md:flex-row md:items-center gap-3 w-full justify-center">
+                    <div className="flex flex-col md:flex-row md:items-center gap-3 w-full md:4/6 justify-center">
                         <label htmlFor="presupuesto" className="font-bold">Precio o presupuesto:</label>
-                        <Campo tipo={"number"} funcion={e=>setPresupuesto(e.target.value)} valor={presupuesto} placeholder={"indique precio/presupuesto"}/>
+                        <input type="number" onChange={e=>setPresupuesto(e.target.value)} value={presupuesto} placeholder={"Indique precio/presupuesto"}
+                        className="p-3 bg-black border solid border-gray-700 hover:border-white rounded-lg w-full md:w-3/6 text-center" />
                     </div> 
                 </div>
             
                 <div className="flex flex-col md:flex-row gap-10 md:my-10 items-center">
-                    <h2 className="font-bold">Medio de contacto: </h2> 
+                    <h2 className="font-bold">Medio de contacto:</h2> 
                     <div className="flex gap-x-14">
                         <div className="flex items-center justify-center gap-x-5">
                             <label htmlFor="contacto">Email:</label>
