@@ -6,7 +6,7 @@ const MensajeContext = createContext();
 
 export const MensajeProvider = ({children}) => {
 
-    const [mensaje, setMensaje] = useState({});
+    // const [mensaje, setMensaje] = useState({});
     const [mensajes, setMensajes] = useState([]);
 
     const crear = async(mensaje) =>{

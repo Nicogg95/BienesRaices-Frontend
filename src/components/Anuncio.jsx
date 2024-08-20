@@ -51,28 +51,38 @@ const Anuncio = ({propiedad, admin}) => {
         {admin ? 
         (<> {/* ------ Anuncio para la seccion Admin ------ */}
 
-          <div className="border border-gray-300 rounded-md flex flex-col justify-between my-5 md:my-1 w-9/12 md:w-11/12">
-            <img src={`https://res.cloudinary.com/dporcnhrk/image/upload/v1721198841/${imagen[0]}.jpg`} alt="foto propiedad" className="w-12/12 border-gray-300 border rounded-t-md"/>
-            <h3 className="text-center text-2xl pb-3 my-5 border-b-2 mx-auto w-10/12">{titulo}</h3>
-            <div className={`flex flex-col gap-y-2 px-5 h-fit md:min-h-[185px]`}>  
-              <p className='break-words mb-5'>{descripcion}</p>
-              <p><span className="font-bold">Precio: </span> ${precio}</p>
-              <p><span className="font-bold">Operacion: </span> {operacion}</p>
-              <p><span className="font-bold">Direccion: </span> {direccion}</p>
+          <div className="border border-gray-300 rounded-md flex flex-col justify-between my-5 md:my-1 w-12/12 md:w-11/12">
+            <img src={`https://res.cloudinary.com/dporcnhrk/image/upload/v1721198841/${imagen[0]}.jpg`} 
+              alt="foto propiedad" 
+              className="w-12/12 border-gray-300 border rounded-t-md"/>
+
+            <div className='flex flex-col mt-5'>
+              <h3 className="text-center text-2xl pb-3 mb-5 border-b-2 mx-auto w-10/12">
+                {titulo}
+              </h3>
+              
+              <div className={`flex flex-col gap-y-2 px-5 h-fit md:min-h-[185px]`}>  
+                <p className='h-[150px] break-words overflow-auto'>{descripcion}</p>
+                <p><span className="font-bold">Precio: </span> ${precio}</p>
+                <p><span className="font-bold">Operacion: </span> {operacion}</p>
+                <p><span className="font-bold">Direccion: </span> {direccion}</p>
+              </div>
+              
+              <div className="flex justify-between px-5 items-center mt-5">
+                <img src="../img/icono_wc.svg" alt="icono baño" className="invert md:w-[35px] w-6"/>
+                <p>{baños}</p>
+                <img src="../img/icono_dormitorio.svg" alt="icono habitacion" className="invert w-8 md:w-10"/>
+                <p>{habitaciones}</p>
+                <img src="../img/icono_estacionamiento.svg" alt="icono estacionamiento" className="invert w-8 md:w-10"/>
+                <p>{estacionamientos}</p>
+              </div>  
+              
+              <div className="grid grid-cols-3 mt-5 justify-center">
+                <button className="col-span-1 py-3 md:p-3 uppercase bg-red-600 hover:bg-red-700 border rounded-bl-md font-bold" onClick={()=>btnEliminar()}>Eliminar</button>
+                <button className="col-span-1 py-3 md:p-3 bg-blue-600 uppercase hover:bg-blue-700 border font-bold"  onClick={()=>setEdicion(propiedad)}>Editar</button>
+                <Boton clases="col-span-1 py-3 md:p-3 bg-lime-600 hover:bg-lime-700 border rounded-br-md font-bold" href={`/propiedad/${_id}`} texto={"Ver"}/>
+              </div>
             </div>
-            <div className="flex justify-around px-5 items-center mt-5">
-              <img src="../img/icono_wc.svg" alt="icono baño" className="invert md:w-[35px] w-6"/>
-              <p>{baños}</p>
-              <img src="../img/icono_dormitorio.svg" alt="icono habitacion" className="invert w-8 md:w-10"/>
-              <p>{habitaciones}</p>
-              <img src="../img/icono_estacionamiento.svg" alt="icono estacionamiento" className="invert w-8 md:w-10"/>
-              <p>{estacionamientos}</p>
-            </div>  
-            <div className="grid grid-cols-3 mt-5 justify-center">
-              <button className="col-span-1 py-3 md:p-3 uppercase bg-red-600 hover:bg-red-700 border rounded-bl-md font-bold" onClick={()=>btnEliminar()}>Eliminar</button>
-              <button className="col-span-1 py-3 md:p-3 bg-blue-600 uppercase hover:bg-blue-700 border font-bold"  onClick={()=>setEdicion(propiedad)}>Editar</button>
-              <Boton clases="col-span-1 py-3 md:p-3 bg-lime-600 hover:bg-lime-700 border rounded-br-md font-bold" href={`/propiedad/${_id}`} texto={"Ver"}/>
-            </div> 
           </div>
         </>)
         : 
@@ -80,7 +90,7 @@ const Anuncio = ({propiedad, admin}) => {
         
           {/* ------ Anuncio para la seccion Inicio ------ */}
 
-          <div className="flex flex-col gap-y-5 items-center min-w-[18rem] min-h-fit rounded-t-md border border-gray-300 hover:shadow-white hover:shadow-lg">
+          <div className="flex flex-col gap-y-5 items-center min-h-fit rounded-t-md border border-gray-300 hover:shadow-white hover:shadow-lg">
             <img src={`https://res.cloudinary.com/dporcnhrk/image/upload/v1721198841/${imagen[0]}.jpg`} alt="foto propiedad" className="w-full border-b rounded-t-md border-gray-300"/>
             <h3 className="text-center text-2xl">{titulo}</h3>
             <div className="flex flex-col gap-y-5 px-5">

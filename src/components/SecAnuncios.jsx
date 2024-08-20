@@ -35,16 +35,12 @@ const SecAnuncios = ({admin, cantidad}) => {
   return (
     <>
       <div className="md:px-5 mx-auto">
-        
         {!admin &&
-          (
-          <div className="flex flex-col md:flex-row items-center mb-10 justify-center gap-5">
-          
-            {buscador &&
-  
-              (<input className="p-3 text-white rounded-md bg-black border text-center w-10/12 md:w-5/12" placeholder="¿Que esta buscando?" onChange={e=>setBuscar(e.target.value)} onKeyUp={()=>buscarPropiedades(buscar)} value={buscar}/>)
-            }
-            {mostrarFiltros &&
+          <div className="flex flex-col md:flex-row items-center mb-10 justify-center gap-5"> 
+          {buscador &&
+            <input className="p-3 text-white rounded-md bg-black border text-center w-10/12 md:w-5/12" placeholder="¿Que esta buscando?" onChange={e=>setBuscar(e.target.value)} onKeyUp={()=>buscarPropiedades(buscar)} value={buscar}/>
+          }
+          {mostrarFiltros &&
             <div className="flex md:gap-5 gap-16">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
                   viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6 cursor-pointer" onClick={()=>handleClickBuscar()}>
@@ -56,27 +52,28 @@ const SecAnuncios = ({admin, cantidad}) => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
               </svg>
             </div>
-            }
+          }
 
-            {mostrarModal && <ModalFiltro />}
-          </div>)
-        }
+          {mostrarModal && <ModalFiltro />}
+        </div>}
 
-        {propiedades? 
-          
-          (<div className={`${admin ? "gap-5 my-8 md:col-span-2 grid md:grid-cols-2 w-fit" : "grid px-5 md:grid-cols-3 gap-8"}`}>
+        {propiedades.length? 
+          (
+          <div className={`${admin ? "gap-5 my-8 md:col-span-2 grid md:grid-cols-2 w-fit" : "grid px-5 md:grid-cols-3 gap-8"}`}>
             {propiedades?.slice(0, fin).map(propiedad => (
-            <Anuncio admin={admin}  
+            <Anuncio admin={admin}
               key={propiedad._id}
-              propiedad={propiedad}/>
-          ))}</div>
-          ):(
-            <div className="mx-auto text-center mt-10"> 
-              <img src="img\cargando.webp" className="w-[10rem] mx-auto"/>
+              propiedad={propiedad}/>))
+            }
+          </div>
+          )
+          :
+          (
+            <div className="flex items-center text-center"> 
+              <img src="img\cargando.webp" className="w-[5rem] m-auto"/>
             </div>
           )
-        }   
-        
+        }        
       </div>
     </>
   )

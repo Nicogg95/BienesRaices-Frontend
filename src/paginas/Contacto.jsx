@@ -65,12 +65,12 @@ const Contacto = () => {
         <div className="flex flex-col gap-y-10 container mx-auto p-10">
             <h1 className="text-center text-3xl uppercase font-bold">Contactenos!</h1>
             <img src="../img/destacada3.jpg" alt="imagen-contacto" className="md:w-9/12 mx-auto rounded-xl border border-gray-500"/>
-            <form action="" onSubmit={handleSubmit} className="w-10/12 mx-auto">
+            <form action="" onSubmit={handleSubmit} className="md:w-10/12">
                 <Campo tipo={"text"} placeholder={"Ingrese su nombre"} texto={"Nombre:"} valor={nombre} funcion={e=>setNombre(e.target.value)}/>
                 <Campo tipo={"tel"} placeholder={"Ingrese su telefono"} texto={"Telefono:"} valor={telefono} funcion={e=>setTelefono(e.target.value)}/>
                 <Campo tipo={"email"} placeholder={"Ingrese su email"} texto={"Email:"} valor={email} funcion={e=>setEmail(e.target.value)}/>
                 <div className="flex flex-col gap-5 md:justify-around mb-5">
-                    <label name="mensaje" className="font-bold">Mensaje:</label>
+                    <label htmlFor="mensaje" className="font-bold">Mensaje:</label>
                     <textarea name="mensaje" id="mensaje" value={mensaje}
                     rows={4} className="p-3 bg-black border solid border-gray-700 hover:border-white rounded-lg w-full" 
                     placeholder="Ingrese su mensaje" onChange={e=>setMensaje(e.target.value)}>
@@ -78,7 +78,7 @@ const Contacto = () => {
                 </div>
                 <div className="flex flex-col md:flex-row gap-5 md:justify-around items-center">
                     <div className="flex md:flex-row flex-col md:items-center gap-5 w-full md:w-5/6">
-                        <label htmlFor="" className="block font-bold">Tipo de operacion:</label>
+                        <label htmlFor="operacion" className="block font-bold">Tipo de operacion:</label>
                         <select name="operacion" id="operacion" className="p-3 bg-black border solid border-gray-700 hover:border-white rounded-lg w-full text-center" onChange={e=>setOperacion(e.target.value)} value={operacion}>
                             <option value="" disabled selected>--SELECCIONAR--</option>
                             <option value="venta">Venta</option>
@@ -87,20 +87,20 @@ const Contacto = () => {
                         </select>
                     </div>
                     <div className="flex flex-col md:flex-row md:items-center gap-3 w-full justify-center">
-                        <label htmlFor="" className="font-bold">Precio o presupuesto:</label>
-                        <Campo tipo={"number"} funcion={e=>setPresupuesto(e.target.value)} valor={presupuesto}/>
+                        <label htmlFor="presupuesto" className="font-bold">Precio o presupuesto:</label>
+                        <Campo tipo={"number"} funcion={e=>setPresupuesto(e.target.value)} valor={presupuesto} placeholder={"indique precio/presupuesto"}/>
                     </div> 
                 </div>
             
-                <div className="flex flex-col md:flex-row gap-10 my-10 items-center">
+                <div className="flex flex-col md:flex-row gap-10 md:my-10 items-center">
                     <h2 className="font-bold">Medio de contacto: </h2> 
                     <div className="flex gap-x-14">
                         <div className="flex items-center justify-center gap-x-5">
-                            <label htmlFor="">Email:</label>
+                            <label htmlFor="contacto">Email:</label>
                             <input name="contacto" type="radio" onChange={e=>setContacto(e.target.value)} value="email"/>
                         </div>
                         <div className="flex items-center gap-x-5">
-                            <label htmlFor="">Telefono:</label>
+                            <label htmlFor="telefono">Telefono:</label>
                             <input name="contacto" type="radio"  onChange={e=>setContacto(e.target.value)} value="telefono"/>
                         </div>
                     </div>      
@@ -130,7 +130,7 @@ const Contacto = () => {
                     </div>
 
                     <div className="flex items-center justify-center px-5 border w-full md:w-60 bg-lime-700">
-                        <Boton texto={"Enviar mensaje"} clases={""} form={true} />
+                        <Boton texto={"Enviar mensaje"} form={true} />
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 9v.906a2.25 2.25 0 0 1-1.183 1.981l-6.478 3.488M2.25 9v.906a2.25 2.25 0 0 0 1.183 1.981l6.478 3.488m8.839 2.51-4.66-2.51m0 0-1.023-.55a2.25 2.25 0 0 0-2.134 0l-1.022.55m0 0-4.661 2.51m16.5 1.615a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V8.844a2.25 2.25 0 0 1 1.183-1.981l7.5-4.039a2.25 2.25 0 0 1 2.134 0l7.5 4.039a2.25 2.25 0 0 1 1.183 1.98V19.5Z" />
                         </svg>

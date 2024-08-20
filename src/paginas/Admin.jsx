@@ -132,7 +132,7 @@ const Admin = () => {
             {mostrarModal && <ModalFiltro />}
           </div>  
           <div className="md:overflow-scroll md:h-[65rem]">
-            <SecAnuncios admin={true}/>          
+            <SecAnuncios admin/>          
           </div>
         </div>
       </div>
